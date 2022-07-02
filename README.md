@@ -59,7 +59,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.endsWith;
+})();
 })();
 </script>
 ```
@@ -116,6 +118,7 @@ var bool = endsWith( str, '' );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var bool;
 var str;
@@ -134,6 +137,7 @@ bool = endsWith( str, 'fair', 30 );
 bool = endsWith( str, 'fair', -34 );
 // returns true
 
+})();
 })();
 </script>
 </body>
@@ -235,7 +239,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/starts-with]: https://github.com/stdlib-js/string-starts-with/tree/umd
+[@stdlib/string/starts-with]: https://github.com/stdlib-js/string-starts-with/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
