@@ -37,7 +37,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@v0.0.9-esm/index.mjs';
+import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@esm/index.mjs';
 ```
 
 #### endsWith( str, search\[, len] )
@@ -91,7 +91,7 @@ var bool = endsWith( str, '' );
 <body>
 <script type="module">
 
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@v0.0.9-esm/index.mjs';
+import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@esm/index.mjs';
 
 var bool;
 var str;
