@@ -37,7 +37,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@v0.0.9-deno/mod.js';
+import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@deno/mod.js';
 ```
 
 #### endsWith( str, search\[, len] )
@@ -86,7 +86,7 @@ var bool = endsWith( str, '' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@v0.0.9-deno/mod.js';
+import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@deno/mod.js';
 
 var bool;
 var str;
