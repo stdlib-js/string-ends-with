@@ -30,19 +30,35 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-ends-with
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@deno/mod.js';
+var endsWith = require( '@stdlib/string-ends-with' );
 ```
 
 #### endsWith( str, search\[, len] )
 
-Tests if a `string` ends with the characters of another `string`.
+Tests if a string ends with the characters of another string.
 
 ```javascript
 var str = 'Remember the story I used to tell you when you were a boy?';
@@ -79,6 +95,27 @@ var bool = endsWith( str, '' );
 
 <!-- /.usage -->
 
+<section class="notes">
+
+## Notes
+
+-   In general, exercise caution when operating on substrings containing Unicode characters, as the visual character length may not equal the number of code points. For example,
+
+    ```javascript
+    var len = '🏠'.length;
+    // returns 2
+    ```
+
+-   This function differs from [`String.prototype.endsWith`][mdn-string-endswith] in the following ways:
+
+    -   The function requires string values for the first and second arguments and requires that the `len` argument is an integer value.
+    -   The function does **not** clamp positive `len` values to the end of the input string.
+    -   Except when provided an empty `search` string, the function **always** returns `false` is a `len` resolves to a starting search position which exceeds the bounds of the input string.
+
+</section>
+
+<!-- /.notes -->
+
 <section class="examples">
 
 ## Examples
@@ -86,14 +123,11 @@ var bool = endsWith( str, '' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import endsWith from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-ends-with@deno/mod.js';
+var endsWith = require( '@stdlib/string-ends-with' );
 
-var bool;
-var str;
+var str = 'Fair is foul, and foul is fair, hover through fog and filthy air';
 
-str = 'Fair is foul, and foul is fair, hover through fog and filthy air';
-
-bool = endsWith( str, 'air' );
+var bool = endsWith( str, 'air' );
 // returns true
 
 bool = endsWith( str, 'fair' );
@@ -110,7 +144,101 @@ bool = endsWith( str, 'fair', -34 );
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use the module as a general utility, install the module globally
+
+```bash
+npm install -g @stdlib/string-ends-with
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: ends-with [options] --search=<string> [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --search string       Search string.
+         --len int             Substring length.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'Hello, World!\nBeep Boop Baz' | ends-with --search=Beep --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'Hello, World!\nBeep Boop Baz' | ends-with --search=Beep --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ ends-with --search=ep beep
+true
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'boop' | ends-with --search=ep
+false
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n 'Hello, World!\tBeep Boop' | ends-with --search=Boop --split '\t'
+false
+true
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -135,7 +263,7 @@ bool = endsWith( str, 'fair', -34 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -199,9 +327,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
+[mdn-string-endswith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
+
 <!-- <related-links> -->
 
-[@stdlib/string/starts-with]: https://github.com/stdlib-js/string-starts-with/tree/deno
+[@stdlib/string/starts-with]: https://github.com/stdlib-js/string-starts-with
 
 <!-- </related-links> -->
 
