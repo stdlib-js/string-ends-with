@@ -2,40 +2,6 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
-
-## Unreleased (2024-08-01)
-
-<section class="commits">
-
-### Commits
-
-<details>
-
--   [`22c4d29`](https://github.com/stdlib-js/stdlib/commit/22c4d29898e2b5bb4cb071a6b7f62536027eaf28) - **docs:** remove blank line _(by Athan Reines)_
-
-</details>
-
-</section>
-
-<!-- /.commits -->
-
-<section class="contributors">
-
-### Contributors
-
-A total of 1 person contributed to this release. Thank you to this contributor:
-
--   Athan Reines
-
-</section>
-
-<!-- /.contributors -->
-
-</section>
-
-<!-- /.release -->
-
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-27)
@@ -60,7 +26,33 @@ No changes reported for this release.
 
 ## 0.2.0 (2024-02-14)
 
-No changes reported for this release.
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`4fbe560`](https://github.com/stdlib-js/stdlib/commit/4fbe560cf893eddc87b9e9dc9fcef62948608cba) - **docs:** fix typo _(by Athan Reines)_
+-   [`f9c75ce`](https://github.com/stdlib-js/stdlib/commit/f9c75ce726ed4e5fade8622315bb98094dad8561) - **build:** remove tslint directives _(by Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Athan Reines
+-   Philipp Burckhardt
+
+</section>
+
+<!-- /.contributors -->
 
 </section>
 
@@ -70,7 +62,51 @@ No changes reported for this release.
 
 ## 0.1.0 (2023-09-23)
 
-No changes reported for this release.
+<section class="features">
+
+### Features
+
+-   [`3573d92`](https://github.com/stdlib-js/stdlib/commit/3573d92955f1150eae58fb534808b7a30532a1c1) - update minimum TypeScript version
+
+</section>
+
+<!-- /.features -->
+
+<section class="breaking-changes">
+
+### BREAKING CHANGES
+
+-   [`3573d92`](https://github.com/stdlib-js/stdlib/commit/3573d92955f1150eae58fb534808b7a30532a1c1): update minimum TypeScript version
+
+</section>
+
+<!-- /.breaking-changes -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`3573d92`](https://github.com/stdlib-js/stdlib/commit/3573d92955f1150eae58fb534808b7a30532a1c1) - **feat:** update minimum TypeScript version _(by Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Philipp Burckhardt
+
+</section>
+
+<!-- /.contributors -->
 
 </section>
 
